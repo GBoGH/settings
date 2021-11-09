@@ -1,181 +1,277 @@
 {
-    // Colors, color theme
-    "workbench.colorTheme": "Night Owl",
-    "workbench.preferredDarkColorTheme": "Night Owl",
-    "workbench.preferredLightColorTheme": "Night Owl",
-    "workbench.colorCustomizations": {
-        "terminal.foreground": "#D0D0D0",
-        "terminalCursor.background": "#D0D0D0",
-        "terminalCursor.foreground": "#D0D0D0",
-        "terminal.ansiBlack": "#D0D0D0",
-        "terminal.ansiBlue": "#D0D0D0",
-        "terminal.ansiBrightBlack": "#D0D0D0",
-        "terminal.ansiBrightBlue": "#33FF00",
-        "terminal.ansiBrightCyan": "#33FF00",
-        "terminal.ansiBrightGreen": "#33FF00",
-        "terminal.ansiBrightMagenta": "#D0D0D0",
-        "terminal.ansiBrightRed": "#FF0000",
-        "terminal.ansiBrightWhite": "#33FF00",
-        "terminal.ansiBrightYellow": "#33FF00",
-        "terminal.ansiCyan": "#D0D0D0",
-        "terminal.ansiGreen": "#33FF00",
-        "terminal.ansiMagenta": "#D0D0D0",
-        "terminal.ansiRed": "#D0D0D0",
-        "terminal.ansiWhite": "#D0D0D0",
-        "terminal.ansiYellow": "#D0D0D0"
-    },
-    "workbench.iconTheme": "material-icon-theme",
-    "material-icon-theme.folders.theme": "classic",
-
-
-    // Execution
-    "python.pythonPath": "C:\\Users\\jakub\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
-    
-    
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
-
-    "launch": {
-        "configurations": [
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": 
+    [
+        {
+            "command": 
             {
-                "name": "Python: Integrated Terminal",
-                "type": "python",
-                "request": "launch",
-                "program": "${file}",
-                "cwd": "${fileDirname}",
-                "console": "integratedTerminal"
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+c"
+        },
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
+        }
+    ],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "profiles": 
+    {
+        "defaults": {},
+        "list": 
+        [
+            {
+                "colorScheme": "One Half Dark",
+                "commandline": "powershell.exe",
+                "fontFace": "Consolas",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell",
+                "startingDirectory": "%__CD__%",
+                "tabTitle": "PowerShell"
             },
             {
-                "name": "Python: External Terminal",
-                "type": "python",
-                "request": "launch",
-                "program": "${file}",
-                "cwd": "${fileDirname}",
-                "console": "externalTerminal"
+                "commandline": "cmd.exe",
+                "foreground": "#16C60C",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt",
+                "startingDirectory": "%__CD__%"
             },
             {
-                "name": "Flask Internal Terminal",
-                "type": "python",
-                "request": "launch",
-                "module": "flask",
-                "env": {
-                    "FLASK_APP": "app.py",
-                    "FLASK_ENV": "development"
-                },
-                "args": [
-                    "run",
-                ],
-                "jinja": true,
-                "console": "integratedTerminal"
-            },
-            {
-                "name": "Flask External Terminal",
-                "type": "python",
-                "request": "launch",
-                "module": "flask",
-                "env": {
-                    "FLASK_APP": "app.py",
-                    "FLASK_ENV": "development"
-                },
-                "args": [
-                    "run",
-                ],
-                "jinja": true,
-                "console": "externalTerminal"
-            },
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            }
         ]
     },
-    "python.languageServer": "Pylance",
-    // Terminal settings
-    "terminal.external.windowsExec": "wt -p cmd cmd",
-    "terminal.integrated.fontFamily": "Consolas, 'Courier New', monospace",
-    "code-runner.runInTerminal": true,
-    "debug.console.closeOnEnd": false,
-    //  Pylint settings
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
-    "python.linting.pylintArgs": [
-        "--unsafe-load-any-extension=y",
-        "--disable=all",
-        "--enable=F,E,unreachable,duplicate-key,unnecessary-semicolon,global-variable-not-assigned,binary-op-exception,bad-format-string,anomalous-backslash-in-string,bad-open-mode,bad-whitespace,trailing-whitespace,comparison-with-itself,reimported,import-self,trailing-newlines,bad-whitespace,bad-continuation,wrong-import-order,ungrouped-imports,wrong-import-position,unused-import"
+    "schemes": 
+    [
+        {
+            "background": "#0C0C0C",
+            "black": "#0C0C0C",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#3B78FF",
+            "brightCyan": "#61D6D6",
+            "brightGreen": "#16C60C",
+            "brightPurple": "#B4009E",
+            "brightRed": "#E74856",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#F9F1A5",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#CCCCCC",
+            "green": "#13A10E",
+            "name": "Campbell",
+            "purple": "#881798",
+            "red": "#C50F1F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#C19C00"
+        },
+        {
+            "background": "#012456",
+            "black": "#0C0C0C",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#3B78FF",
+            "brightCyan": "#61D6D6",
+            "brightGreen": "#16C60C",
+            "brightPurple": "#B4009E",
+            "brightRed": "#E74856",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#F9F1A5",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#CCCCCC",
+            "green": "#13A10E",
+            "name": "Campbell Powershell",
+            "purple": "#881798",
+            "red": "#C50F1F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#C19C00"
+        },
+        {
+            "background": "#282C34",
+            "black": "#282C34",
+            "blue": "#61AFEF",
+            "brightBlack": "#5A6374",
+            "brightBlue": "#61AFEF",
+            "brightCyan": "#56B6C2",
+            "brightGreen": "#98C379",
+            "brightPurple": "#C678DD",
+            "brightRed": "#E06C75",
+            "brightWhite": "#DCDFE4",
+            "brightYellow": "#9FE478",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#56B6C2",
+            "foreground": "#DCDFE4",
+            "green": "#98C379",
+            "name": "One Half Dark",
+            "purple": "#C678DD",
+            "red": "#E06C75",
+            "selectionBackground": "#FFFFFF",
+            "white": "#DCDFE4",
+            "yellow": "#E5C07B"
+        },
+        {
+            "background": "#FAFAFA",
+            "black": "#383A42",
+            "blue": "#0184BC",
+            "brightBlack": "#4F525D",
+            "brightBlue": "#61AFEF",
+            "brightCyan": "#56B5C1",
+            "brightGreen": "#98C379",
+            "brightPurple": "#C577DD",
+            "brightRed": "#DF6C75",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#E4C07A",
+            "cursorColor": "#4F525D",
+            "cyan": "#0997B3",
+            "foreground": "#383A42",
+            "green": "#50A14F",
+            "name": "One Half Light",
+            "purple": "#A626A4",
+            "red": "#E45649",
+            "selectionBackground": "#FFFFFF",
+            "white": "#FAFAFA",
+            "yellow": "#C18301"
+        },
+        {
+            "background": "#002B36",
+            "black": "#002B36",
+            "blue": "#268BD2",
+            "brightBlack": "#073642",
+            "brightBlue": "#839496",
+            "brightCyan": "#93A1A1",
+            "brightGreen": "#586E75",
+            "brightPurple": "#6C71C4",
+            "brightRed": "#CB4B16",
+            "brightWhite": "#FDF6E3",
+            "brightYellow": "#657B83",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#2AA198",
+            "foreground": "#839496",
+            "green": "#859900",
+            "name": "Solarized Dark",
+            "purple": "#D33682",
+            "red": "#DC322F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#EEE8D5",
+            "yellow": "#B58900"
+        },
+        {
+            "background": "#FDF6E3",
+            "black": "#002B36",
+            "blue": "#268BD2",
+            "brightBlack": "#073642",
+            "brightBlue": "#839496",
+            "brightCyan": "#93A1A1",
+            "brightGreen": "#586E75",
+            "brightPurple": "#6C71C4",
+            "brightRed": "#CB4B16",
+            "brightWhite": "#FDF6E3",
+            "brightYellow": "#657B83",
+            "cursorColor": "#002B36",
+            "cyan": "#2AA198",
+            "foreground": "#657B83",
+            "green": "#859900",
+            "name": "Solarized Light",
+            "purple": "#D33682",
+            "red": "#DC322F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#EEE8D5",
+            "yellow": "#B58900"
+        },
+        {
+            "background": "#000000",
+            "black": "#000000",
+            "blue": "#3465A4",
+            "brightBlack": "#555753",
+            "brightBlue": "#729FCF",
+            "brightCyan": "#34E2E2",
+            "brightGreen": "#8AE234",
+            "brightPurple": "#AD7FA8",
+            "brightRed": "#EF2929",
+            "brightWhite": "#EEEEEC",
+            "brightYellow": "#FCE94F",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#06989A",
+            "foreground": "#D3D7CF",
+            "green": "#4E9A06",
+            "name": "Tango Dark",
+            "purple": "#75507B",
+            "red": "#CC0000",
+            "selectionBackground": "#FFFFFF",
+            "white": "#D3D7CF",
+            "yellow": "#C4A000"
+        },
+        {
+            "background": "#FFFFFF",
+            "black": "#000000",
+            "blue": "#3465A4",
+            "brightBlack": "#555753",
+            "brightBlue": "#729FCF",
+            "brightCyan": "#34E2E2",
+            "brightGreen": "#8AE234",
+            "brightPurple": "#AD7FA8",
+            "brightRed": "#EF2929",
+            "brightWhite": "#EEEEEC",
+            "brightYellow": "#FCE94F",
+            "cursorColor": "#000000",
+            "cyan": "#06989A",
+            "foreground": "#555753",
+            "green": "#4E9A06",
+            "name": "Tango Light",
+            "purple": "#75507B",
+            "red": "#CC0000",
+            "selectionBackground": "#FFFFFF",
+            "white": "#D3D7CF",
+            "yellow": "#C4A000"
+        },
+        {
+            "background": "#000000",
+            "black": "#000000",
+            "blue": "#000080",
+            "brightBlack": "#808080",
+            "brightBlue": "#0000FF",
+            "brightCyan": "#00FFFF",
+            "brightGreen": "#00FF00",
+            "brightPurple": "#FF00FF",
+            "brightRed": "#FF0000",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#FFFF00",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#008080",
+            "foreground": "#C0C0C0",
+            "green": "#008000",
+            "name": "Vintage",
+            "purple": "#800080",
+            "red": "#800000",
+            "selectionBackground": "#FFFFFF",
+            "white": "#C0C0C0",
+            "yellow": "#808000"
+        }
     ],
-    "python.linting.pylintUseMinimalCheckers": true,
-    //Formatting and saving
-    "editor.formatOnType": true,
-    "python.formatting.provider": "autopep8",
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 1000,
-    "editor.wordWrapColumn": 79,
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.wrappingIndent": "none",
-    "window.newWindowDimensions": "maximized",
-    "diffEditor.ignoreTrimWhitespace": true,
-    "python.autoComplete.addBrackets": true,
-    // Testing
-    "go.enableCodeLens": {
-        "runtest": false
-    },
-    "python.testing.unittestEnabled": false,
-    "python.testing.unittestArgs": [
-        "-v",
-        "-s",
-        ".",
-        "-p",
-        "test_*.py"
-    ],
-    "python.testing.pytestEnabled": false,
-    "python.testing.nosetestsEnabled": false,
-    // Git settings
-    "git.autofetch": true,
-    "git.enabled": true,
-    "git.pruneOnFetch": true,
-    // Misc
-    "python.analysis.completeFunctionParens": true,
-    "editor.suggestSelection": "first",
-    "editor.snippetSuggestions": "inline",
-    "vsintellicode.python.completionsEnabled": true,
-    "diffEditor.codeLens": true,
-    "editor.acceptSuggestionOnEnter": "smart",
-    "editor.codeLens": false,
-    "editor.showUnused": false,
-    "glassit.alpha": 255,
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
-    },
-    "tabnine.experimentalAutoImports": true,
-    "C_Cpp.updateChannel": "Insiders",
-    "emmet.triggerExpansionOnTab": true,
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/__pycache__": true
-    },
-    "advancedNewFile.convenienceOptions": [
-        "last",
-        "root"
-    ],
-    "workbench.editor.closeOnFileDelete": true,
-    "search.quickOpen.includeSymbols": true,
-    "search.useIgnoreFiles": false,
-    "editor.renderIndentGuides": false,
-    "editor.highlightActiveIndentGuide": false,
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    },
-    "debug.terminal.clearBeforeReusing": true,
-    "explorer.compactFolders": false,
-    "editor.bracketPairColorization.enabled": true,
-    "editor.guides.bracketPairs": true,
-    "editor.inlineSuggest.enabled": true,
-    "github.copilot.enable": {
-        "*": true,
-        "yaml": false,
-        "plaintext": false,
-        "markdown": false,
-        "powershell": false
-    }
-    
+    "tabSwitcherMode": "inOrder",
+    "windowingBehavior": "useAnyExisting"
 }
