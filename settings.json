@@ -1,0 +1,181 @@
+{
+    // Colors, color theme
+    "workbench.colorTheme": "Night Owl",
+    "workbench.preferredDarkColorTheme": "Night Owl",
+    "workbench.preferredLightColorTheme": "Night Owl",
+    "workbench.colorCustomizations": {
+        "terminal.foreground": "#D0D0D0",
+        "terminalCursor.background": "#D0D0D0",
+        "terminalCursor.foreground": "#D0D0D0",
+        "terminal.ansiBlack": "#D0D0D0",
+        "terminal.ansiBlue": "#D0D0D0",
+        "terminal.ansiBrightBlack": "#D0D0D0",
+        "terminal.ansiBrightBlue": "#33FF00",
+        "terminal.ansiBrightCyan": "#33FF00",
+        "terminal.ansiBrightGreen": "#33FF00",
+        "terminal.ansiBrightMagenta": "#D0D0D0",
+        "terminal.ansiBrightRed": "#FF0000",
+        "terminal.ansiBrightWhite": "#33FF00",
+        "terminal.ansiBrightYellow": "#33FF00",
+        "terminal.ansiCyan": "#D0D0D0",
+        "terminal.ansiGreen": "#33FF00",
+        "terminal.ansiMagenta": "#D0D0D0",
+        "terminal.ansiRed": "#D0D0D0",
+        "terminal.ansiWhite": "#D0D0D0",
+        "terminal.ansiYellow": "#D0D0D0"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.folders.theme": "classic",
+
+
+    // Execution
+    "python.pythonPath": "C:\\Users\\jakub\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    
+    
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+
+    "launch": {
+        "configurations": [
+            {
+                "name": "Python: Integrated Terminal",
+                "type": "python",
+                "request": "launch",
+                "program": "${file}",
+                "cwd": "${fileDirname}",
+                "console": "integratedTerminal"
+            },
+            {
+                "name": "Python: External Terminal",
+                "type": "python",
+                "request": "launch",
+                "program": "${file}",
+                "cwd": "${fileDirname}",
+                "console": "externalTerminal"
+            },
+            {
+                "name": "Flask Internal Terminal",
+                "type": "python",
+                "request": "launch",
+                "module": "flask",
+                "env": {
+                    "FLASK_APP": "app.py",
+                    "FLASK_ENV": "development"
+                },
+                "args": [
+                    "run",
+                ],
+                "jinja": true,
+                "console": "integratedTerminal"
+            },
+            {
+                "name": "Flask External Terminal",
+                "type": "python",
+                "request": "launch",
+                "module": "flask",
+                "env": {
+                    "FLASK_APP": "app.py",
+                    "FLASK_ENV": "development"
+                },
+                "args": [
+                    "run",
+                ],
+                "jinja": true,
+                "console": "externalTerminal"
+            },
+        ]
+    },
+    "python.languageServer": "Pylance",
+    // Terminal settings
+    "terminal.external.windowsExec": "wt -p cmd cmd",
+    "terminal.integrated.fontFamily": "Consolas, 'Courier New', monospace",
+    "code-runner.runInTerminal": true,
+    "debug.console.closeOnEnd": false,
+    //  Pylint settings
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": [
+        "--unsafe-load-any-extension=y",
+        "--disable=all",
+        "--enable=F,E,unreachable,duplicate-key,unnecessary-semicolon,global-variable-not-assigned,binary-op-exception,bad-format-string,anomalous-backslash-in-string,bad-open-mode,bad-whitespace,trailing-whitespace,comparison-with-itself,reimported,import-self,trailing-newlines,bad-whitespace,bad-continuation,wrong-import-order,ungrouped-imports,wrong-import-position,unused-import"
+    ],
+    "python.linting.pylintUseMinimalCheckers": true,
+    //Formatting and saving
+    "editor.formatOnType": true,
+    "python.formatting.provider": "autopep8",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "editor.wordWrapColumn": 79,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wrappingIndent": "none",
+    "window.newWindowDimensions": "maximized",
+    "diffEditor.ignoreTrimWhitespace": true,
+    "python.autoComplete.addBrackets": true,
+    // Testing
+    "go.enableCodeLens": {
+        "runtest": false
+    },
+    "python.testing.unittestEnabled": false,
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        ".",
+        "-p",
+        "test_*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    // Git settings
+    "git.autofetch": true,
+    "git.enabled": true,
+    "git.pruneOnFetch": true,
+    // Misc
+    "python.analysis.completeFunctionParens": true,
+    "editor.suggestSelection": "first",
+    "editor.snippetSuggestions": "inline",
+    "vsintellicode.python.completionsEnabled": true,
+    "diffEditor.codeLens": true,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.codeLens": false,
+    "editor.showUnused": false,
+    "glassit.alpha": 255,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "tabnine.experimentalAutoImports": true,
+    "C_Cpp.updateChannel": "Insiders",
+    "emmet.triggerExpansionOnTab": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/__pycache__": true
+    },
+    "advancedNewFile.convenienceOptions": [
+        "last",
+        "root"
+    ],
+    "workbench.editor.closeOnFileDelete": true,
+    "search.quickOpen.includeSymbols": true,
+    "search.useIgnoreFiles": false,
+    "editor.renderIndentGuides": false,
+    "editor.highlightActiveIndentGuide": false,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "debug.terminal.clearBeforeReusing": true,
+    "explorer.compactFolders": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false,
+        "powershell": false
+    }
+    
+}
